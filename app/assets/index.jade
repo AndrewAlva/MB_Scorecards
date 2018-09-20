@@ -1,4 +1,34 @@
 extends views/layout.jade
 
 block content
-	h3 index.jade loaded.
+	section#dark-contact-section.contact-section
+		.listen-inview
+			h3.intro-title.h2.inview-children Want to share something?
+			p.intro-description.h4.inview-children Getting in touch is easy. Don't hesitate to fill out the contact form and get in touch.
+
+		.listen-inview
+			figure.form-division.inview-children
+
+		form#contact-form.narrated-form.listen-inview(name="main-contact-form" action="mail.php" method="POST" enctype="multipart/form-data")
+			.narrated-line.inview-children-peek
+				label.h3.regular-text(for="contact-name") Hi, my name is
+				input#contact-name.narrated-input(name="name" type="text" placeholder="Your Name" required)
+				span.h3.regular-text ,
+
+			.narrated-line.inview-children-peek
+				label.h3.regular-text(for="contact-cellphone") my phone number is
+				input#contact-cellphone.narrated-input(name="cellphone" type="text" placeholder="Your Cellphone" required)
+				span.h3.regular-text ,
+
+			.narrated-line.inview-children-peek
+				label.h3.regular-text(for="contact-email") please send the scorecard to
+				input#contact-email.narrated-input(name="email" type="email" placeholder="this Email" required)
+				span.h3.regular-text .
+
+			.narrated-line.inview-children-peek
+				label.h3.regular-text(for="contact-message") I have a message for you,
+
+			.narrated-line.inview-children-peek
+				textarea#contact-message.narrated-input(name="message" type="text" placeholder="Your Message" cols="30" rows="1" required)
+
+			button#submit-contact-data.brand-btn.md-btn.dark-blue.inview-children-peek(type="submit") Submit

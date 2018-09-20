@@ -1,0 +1,123 @@
+// General style
+	.contact-section{
+		position: relative;
+		padding-top: 55px;
+		padding-bottom: 60px;
+		color: $body-color;
+		background-color: $main-blue;
+
+		.intro-title{
+			color: $main-titles-color;
+			width: 200px;
+		}
+
+		.intro-description{
+			color: #fff;
+			width: 280px;
+			margin-bottom: 24px;
+		}
+
+		.form-division{
+			position: relative;
+			width: 33px;
+			height: 1px;
+			margin: 0 auto;
+			margin-bottom: 20px;
+			background-color: #fff;
+		}
+
+		.narrated-form{
+			position: relative;
+			width: 90%;
+			margin: 0 auto;
+			padding-bottom: 8px;
+			text-align: center;
+			color: #fff;
+
+			.narrated-line{
+				margin-bottom: 12px;
+
+				.regular-text{
+					font-family: $brand-font-regular;
+				}
+
+				.narrated-input{
+					max-width: 170px;
+					font-family: $brand-font-regular;
+					font-weight: lighter;
+					@include smoothFont();
+					font-size: 1.85em;
+					line-height: 1em;
+					letter-spacing: -0.02em;
+					color: $light-blue-brand;
+					background-color: transparent;
+					border: none;
+					border-bottom: 1px solid $light-blue-brand;
+					text-align: center;
+
+					&:-ms-input-placeholder { /* Internet Explorer 10-11 */
+					    color: $light-blue-brand;
+					}
+
+					&::-ms-input-placeholder { /* Microsoft Edge */
+					    color: $light-blue-brand;
+					}
+
+					&:-moz-placeholder { /* Firefox 18- */
+						color: $light-blue-brand;
+					}
+					&::-moz-placeholder { /* Firefox 19+ */
+						color: $light-blue-brand;
+					}
+
+					&::-webkit-input-placeholder { /* Chrome/Opera/Safari */
+						color: $light-blue-brand;
+					}
+
+					&::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
+					    color: $light-blue-brand;
+					    opacity: 1; /* Firefox */
+					}
+				}
+
+				#contact-email{
+					max-width: 95%;
+					margin-top: 10px;
+				}
+
+				textarea.narrated-input{
+					max-width: 95%;
+					height: 25px;
+				}
+			}
+
+			#submit-contact-data{
+				margin-top: 35px;
+			}
+		}
+	}
+
+
+// "InView" animation style
+.contact-section{
+	.contact-triangles-bg .inview-children-peek{
+		opacity: 0;
+		@include translate(-120px, 0);
+
+		&.active{
+			opacity: .4;
+			@include translate(0, 0);
+		}
+	}
+
+	.intro-title.inview-children, .intro-description.inview-children, .form-division.inview-children, .narrated-form .inview-children-peek{
+		opacity: 0;
+		@include translate(0, 20px);
+
+		&.active{
+			@include translate(0,0);
+			opacity: 1;
+		}
+	}
+	
+}

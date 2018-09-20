@@ -1,0 +1,161 @@
+@mixin smoothFont(){
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+}
+
+@mixin noSmooth{
+	-webkit-font-smoothing: initial;
+	-moz-osx-font-smoothing: initial;
+}
+
+@mixin boxSizeFit(){
+	-webkit-box-sizing: border-box;
+	   -moz-box-sizing: border-box;
+	        box-sizing: border-box;
+}
+
+@mixin flexIt(){
+	display: -webkit-box; 
+	display: -moz-box;
+	display: -ms-flexbox;
+	display: -webkit-flex; 
+	display: flex;
+}
+
+@mixin dropShadow(){
+	-webkit-box-shadow: 0 2px 3px 2px rgba(52,52,52,0.15);
+	-moz-box-shadow: 0 2px 3px 2px rgba(52,52,52,0.15);
+	box-shadow: 0 2px 3px 2px rgba(52,52,52,0.15);
+}
+
+@mixin drawShadow($xMove, $yMove, $blur, $spread, $color){
+	-webkit-box-shadow: $xMove $yMove $blur $spread $color;
+	-moz-box-shadow: $xMove $yMove $blur $spread $color;
+	box-shadow: $xMove $yMove $blur $spread $color;
+}
+
+@mixin eraseShadow(){
+	-webkit-box-shadow: none;
+	-moz-box-shadow: none;
+	box-shadow: none;
+}
+
+@mixin displayLeft(){
+	position: relative;
+	float: left;
+	display: inline-block;
+	vertical-align: top;
+	zoom: 1; /* Fix for IE7 */
+	*display: inline; /* Fix for IE7 */
+}
+
+@mixin translate($Xmove, $Ymove){
+    -webkit-transform: translate($Xmove, $Ymove);
+       -moz-transform: translate($Xmove, $Ymove);
+        -ms-transform: translate($Xmove, $Ymove);
+    	 -o-transform: translate($Xmove, $Ymove);
+    		transform: translate($Xmove, $Ymove);
+}
+
+@mixin scale($ratio){
+    -webkit-transform: scale($ratio);
+       -moz-transform: scale($ratio);
+        -ms-transform: scale($ratio);
+    	 -o-transform: scale($ratio);
+    		transform: scale($ratio);
+}
+
+@mixin scaleX($ratio){
+    -webkit-transform: scaleX($ratio);
+       -moz-transform: scaleX($ratio);
+        -ms-transform: scaleX($ratio);
+    	 -o-transform: scaleX($ratio);
+    		transform: scaleX($ratio);
+}
+
+@mixin scaleY($ratio){
+    -webkit-transform: scaleY($ratio);
+       -moz-transform: scaleY($ratio);
+        -ms-transform: scaleY($ratio);
+    	 -o-transform: scaleY($ratio);
+    		transform: scaleY($ratio);
+}
+
+@mixin scaleXY($Xratio, $Yratio){
+    -webkit-transform: scale($Xratio, $Yratio);
+       -moz-transform: scale($Xratio, $Yratio);
+        -ms-transform: scale($Xratio, $Yratio);
+    	 -o-transform: scale($Xratio, $Yratio);
+    		transform: scale($Xratio, $Yratio);
+}
+
+@mixin rotate($degs){
+    -webkit-transform: -webkit-rotate($degs);
+    -webkit-transform: rotate($degs);
+       -moz-transform: rotate($degs);
+        -ms-transform: rotate($degs);
+    	 -o-transform: rotate($degs);
+    		transform: rotate($degs);
+}
+
+@mixin transformFrom($xOrigin, $yOrigin){
+    -webkit-transform-origin: $xOrigin $yOrigin;
+       -moz-transform-origin: $xOrigin $yOrigin;
+        -ms-transform-origin: $xOrigin $yOrigin;
+    	 -o-transform-origin: $xOrigin $yOrigin;
+    		transform-origin: $xOrigin $yOrigin;
+}
+
+@mixin transitions($timing){
+	-webkit-transition: all $timing cubic-bezier(.57,0,0.2,1);
+	   -moz-transition: all $timing cubic-bezier(.57,0,0.2,1);
+	    -ms-transition: all $timing cubic-bezier(.57,0,0.2,1);
+	     -o-transition: all $timing cubic-bezier(.57,0,0.2,1);
+	        transition: all $timing cubic-bezier(.57,0,0.2,1);
+}
+
+@mixin transitionsDelayed($timing, $delay){
+	-webkit-transition: all $timing cubic-bezier(.57,0,0.2,1) $delay;
+	   -moz-transition: all $timing cubic-bezier(.57,0,0.2,1) $delay;
+	    -ms-transition: all $timing cubic-bezier(.57,0,0.2,1) $delay;
+	     -o-transition: all $timing cubic-bezier(.57,0,0.2,1) $delay;
+	        transition: all $timing cubic-bezier(.57,0,0.2,1) $delay;
+}
+
+@mixin transitionThis($property, $timing){
+	-webkit-transition: $property $timing cubic-bezier(.57,0,0.2,1);
+	   -moz-transition: $property $timing cubic-bezier(.57,0,0.2,1);
+	    -ms-transition: $property $timing cubic-bezier(.57,0,0.2,1);
+	     -o-transition: $property $timing cubic-bezier(.57,0,0.2,1);
+	        transition: $property $timing cubic-bezier(.57,0,0.2,1);
+}
+
+@mixin transitionTransform($timing){
+	-webkit-transition: -webkit-transform $timing cubic-bezier(.57,0,0.2,1);
+    -moz-transition: transform $timing cubic-bezier(.57,0,0.2,1);
+    -o-transition: transform $timing cubic-bezier(.57,0,0.2,1);
+    transition: transform $timing cubic-bezier(.57,0,0.2,1);
+}
+
+@mixin opacity($val){
+	opacity: $val;
+	filter: alpha(opacity=($val * 100));
+	filter:progid:DXImageTransform.Microsoft.Alpha(Opacity=($val * 100));
+	-ms-filter:'progid:DXImageTransform.Microsoft.Alpha(($val * 100))';
+}
+
+@mixin fadeOut($timing){
+	-webkit-transition: opacity $timing ease-in, z-index 0.001s linear $timing;
+	   -moz-transition: opacity $timing ease-in, z-index 0.001s linear $timing;
+	    -ms-transition: opacity $timing ease-in, z-index 0.001s linear $timing;
+	     -o-transition: opacity $timing ease-in, z-index 0.001s linear $timing;
+	        transition: opacity $timing ease-in, z-index 0.001s linear $timing;
+}
+
+@mixin grayGradient(){
+	background: rgb(245,247,252); /* Old browsers */
+	background: -moz-linear-gradient(left, rgb(245,247,252) 0%, rgb(255,255,255) 100%); /* FF3.6-15 */
+	background: -webkit-linear-gradient(left, rgb(245,247,252) 0%,rgb(255,255,255) 100%); /* Chrome10-25,Safari5.1-6 */
+	background: linear-gradient(to right, rgb(245,247,252) 0%,rgb(255,255,255) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f5f7fc', endColorstr='#ffffff',GradientType=1 ); /* IE6-9 */
+}
