@@ -2,8 +2,10 @@
 @import url("https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.0/normalize.min.css");
 
 // Import your files
-@import 'global/vars.scss';
-@import 'global/mixins.scss';
-@import 'global/default.scss';
+@import 'global/_vars.scss';
+@import 'global/_mixins.scss';
+@import 'global/_default.scss';
 
-@import 'modules/forms.scss';
+@import 'static/_layout.scss';
+
+@import 'modules/_forms.scss';

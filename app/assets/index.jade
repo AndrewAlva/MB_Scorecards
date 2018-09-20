@@ -1,10 +1,18 @@
 extends views/layout.jade
 
 block content
-	section#dark-contact-section.contact-section
+	section.landing-wrapper
 		.listen-inview
-			h3.intro-title.h2.inview-children Want to share something?
-			p.intro-description.h4.inview-children Getting in touch is easy. Don't hesitate to fill out the contact form and get in touch.
+			.mb-logo-container
+				//- img(src="", alt="Modrn Businss Opportunites", title="Modrn Businss Opportunites")
+
+		.listen-inview
+			.tgp-logo-container
+				//- img(src="", alt="The Gents Place", title="The Gents Place")
+
+
+		.listen-inview
+			h3.intro-title.h2.inview-children For more information on The Gents Place Franchise Opportunity:
 
 		.listen-inview
 			figure.form-division.inview-children
@@ -31,4 +39,4 @@ block content
 			.narrated-line.inview-children-peek
 				textarea#contact-message.narrated-input(name="message" type="text" placeholder="Your Message" cols="30" rows="1" required)
 
-			button#submit-contact-data.brand-btn.md-btn.dark-blue.inview-children-peek(type="submit") Submit
+			button#submit-contact-data.brand-btn.md-btn.dark-blue.inview-children-peek(type="submit") Request
