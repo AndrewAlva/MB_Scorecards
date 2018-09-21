@@ -2,20 +2,19 @@ extends views/layout.jade
 
 block content
 	section.landing-wrapper
-		.listen-inview
-			.mb-logo-container
+		header.nav-header.listen-inview
+			.logo-wrapper.inview-children
 				//- img(src="", alt="Modrn Businss Opportunites", title="Modrn Businss Opportunites")
 
-		.listen-inview
-			.tgp-logo-container
-				//- img(src="", alt="The Gents Place", title="The Gents Place")
+			.visit-site.inview-children
+				a(href="#") Go to the site
 
 
 		.listen-inview
 			h3.intro-title.h2.inview-children For more information on The Gents Place Franchise Opportunity:
 
-		.listen-inview
-			figure.form-division.inview-children
+			figure.logo-wrapper.inview-children
+				//- img(src="", alt="The Gents Place", title="The Gents Place")
 
 		form#contact-form.narrated-form.listen-inview(name="main-contact-form" action="mail.php" method="POST" enctype="multipart/form-data")
 			.narrated-line.inview-children-peek
