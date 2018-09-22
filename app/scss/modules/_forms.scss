@@ -1,13 +1,4 @@
 // General style
-	.form-division{
-		position: relative;
-		width: 33px;
-		height: 1px;
-		margin: 0 auto;
-		margin-bottom: 20px;
-		background-color: #fff;
-	}
-
 	.simple-form{
 		z-index: 2;
 		position: relative;
@@ -71,36 +62,34 @@
 			text-align: left;
 
 			.input-row{
-				.single-input{
-					label{
-						display: block;
-						margin-bottom: 8px;
-						font-size: 9px;
-						color: #7d8eaa;
+				label{
+					display: block;
+					margin-bottom: 8px;
+					font-size: 9px;
+					color: #7d8eaa;
 
-						&.required:after{
-							content: '*';
-							position: relative;
-							display: inline-block;
-							color: #f00;
-						}
+					&.required:after{
+						content: '*';
+						position: relative;
+						display: inline-block;
+						color: #f00;
 					}
+				}
 
-					input, textarea{
-						display: block;
-						width: 100%;
-						padding: 12px 18px;
-						margin-bottom: 18px;
-						border: 1px solid rgba(164,178,213,.5);
-						font-size: 12px;
-						color: #0073f9;
-						@include boxSizeFit;
-						@include input-placeholder-color(#a4b2d5);
-					}
+				input, textarea{
+					display: block;
+					width: 100%;
+					padding: 12px 18px;
+					margin-bottom: 18px;
+					border: 1px solid rgba(164,178,213,.5);
+					font-size: 12px;
+					color: #0073f9;
+					@include boxSizeFit;
+					@include input-placeholder-color(#a4b2d5);
+				}
 
-					textarea{
-						height: 120px;
-					}
+				textarea{
+					height: 120px;
 				}
 			}
 		}
@@ -116,6 +105,7 @@
 			font-size: 14px;
 			text-align: center;
 			text-transform: uppercase;
+			@include smoothFont;
 			color: #fff;
 			background-color: #0070f8;
 			cursor: pointer;
@@ -189,3 +179,97 @@
 // 	}
 	
 // }
+
+
+// Responsiveness
+	// Tablet (min-width: 768px) and (max-width: 1024px)
+	@media screen and (min-width: 768px) {
+		.simple-form{
+			padding-left: 40px;
+			padding-right: 40px;
+			margin-bottom: 85px;
+
+			.copy{
+				font-size: 14px;
+			}
+
+			.inputs-wrapper{
+				.input-row{
+					position: relative;
+					width: 100%;
+
+					.single-input{
+						position: relative;
+						display: inline-block;
+						width: 50%;
+						@include boxSizeFit;
+
+						&:first-child{
+							padding-right: 10px;
+						}
+						&:last-child{
+							padding-left: 10px;
+						}
+					}
+
+					label{
+						font-size: 11px;
+					}
+
+					input,textarea{
+						font-size: 14px;
+					}
+				}
+			}
+		}
+	}
+
+	// Small desktop screens and laptops (min-width: 1025px) and (max-width: 1399.8px)
+	@media screen and (min-width: 1025px) {
+		.simple-form{
+			max-width: 946px;
+			padding: 40px 80px;
+
+			.inputs-wrapper {
+				.input-row {
+					input, textarea{
+						margin-bottom: 30px;
+					}
+				}
+			}
+
+			#submit-contact-data{
+				margin-top: 10px;
+			}
+		}
+	}
+
+	// Desktop
+	@media screen and (min-width: 1400px){
+		.simple-form{
+			margin-bottom: 75px;
+
+			.copy{
+				font-size: 20px;
+				margin-bottom: 47px;
+			}
+
+			.inputs-wrapper{
+				.input-row{
+					label{
+						font-size: 12px;
+					}
+
+					input, textarea{
+						font-size: 16px;
+					}
+				}
+			}
+
+			#submit-contact-data{
+				font-size: 16px;
+				padding-left: 24px;
+				padding-right: 24px;
+			}
+		}
+	}

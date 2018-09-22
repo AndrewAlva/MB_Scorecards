@@ -19,7 +19,7 @@ block content
 
 		form#contact-form.simple-form.listen-inview(name="main-contact-form" action="mail.php" method="POST" enctype="multipart/form-data")
 			h2.copy.inview-children
-				| Fill out the contact form to request the complete report about 
+				| Fill out this form to request the complete report about 
 				| <a href="https://thegentsplace.com/" target="_blank"> ©The Gents Place</a>
 				| as a Franchise Opportunity.
 
@@ -43,9 +43,8 @@ block content
 						input#contact-email(name="email" type="email" placeholder="Your Email" required)
 
 				.input-row.inview-children
-					.single-input
-						label(for="contact-feedback") Feedback
-						textarea#contact-feedback(name="message" type="text" placeholder="Your Feedback" required)
+					label(for="contact-feedback") Feedback
+					textarea#contact-feedback(name="message" type="text" placeholder="Your Feedback" required)
 
 			button#submit-contact-data.brand-btn.md-btn.dark-blue.inview-children-peek(type="submit") Request
 

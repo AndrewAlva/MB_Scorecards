@@ -150,3 +150,101 @@
 		}
 	}
 }
+
+// Responsiveness
+	// Tablet (min-width: 768px) and (max-width: 1024px)
+	@media screen and (min-width: 768px) {
+		.footer-links {
+			display: block;
+			margin-left: -50px;
+			margin-right: -50px;
+
+			.media-list, .rrss-list, .legals-footer{
+				padding-left: 50px;
+				padding-right: 50px;
+			}
+
+			.media-list{
+				display: -webkit-box;      /* OLD - iOS 6-, Safari 3.1-6 */
+				display: -moz-box;         /* OLD - Firefox 19- (buggy but mostly works) */
+				display: -ms-flexbox;      /* TWEENER - IE 10 */
+				display: -webkit-flex;     /* NEW - Chrome */
+				display: flex;             /* NEW, Spec - Opera 12.1, Firefox 20+ */
+
+				-webkit-justify-content: space-between;
+				-moz-justify-content: space-between;
+				justify-content: space-between;
+
+				padding-top: 23px;
+				padding-bottom: 23px;
+
+				.channels-list{
+					display: inline-block;
+					padding: 0;
+					font-size: 13px;
+				}
+			}
+
+			.rrss-list{
+				font-size: 18px;
+				padding-top: 0;
+			}
+
+			.legals-footer{
+				.legal-text{
+					&.brand-copyright{
+						margin-bottom: initial;
+					}
+					&.studio-copyright{
+						padding: initial;
+					}
+				}
+
+				.brand-copyright{float: left; text-align: left;}
+				.studio-copyright{float: right; text-align: right;}
+			}
+		}
+	}
+
+	// Small desktop screens and laptops (min-width: 1025px) and (max-width: 1399.8px)
+	@media screen and (min-width: 1025px) {
+		.footer-links {
+			.media-list{
+				max-width: 1040px;
+				padding-top: 30px;
+				padding-bottom: 30px;
+
+				.channels-list{
+					font-size: 15px;
+				}
+			}
+
+			.rrss-list{
+				max-width: 1040px;
+				font-size: 21px;
+			}
+
+			.legals-footer{
+				max-width: 1040px;
+				padding-top: 14px;
+				padding-bottom: 14px;
+
+				.legal-text{
+					font-size: 13px;
+				}
+			}
+		}
+	}
+
+	// Desktop
+	@media screen and (min-width: 1400px){
+		.footer-links {
+			.rrss-list {
+				.icon-listed{
+					padding: 0 23px;
+				}
+			}
+		}
+	}
+
+	

@@ -31,6 +31,7 @@
 		a{
 			text-decoration: none;
 			color: #00145a;
+			@include transitions(.4s);
 		
 			&:after{
 				content: '';
@@ -43,7 +44,54 @@
 				border-left: 6px solid #2f70f4;
 				border-top: 5px solid transparent;
 				border-bottom: 5px solid transparent;
+				@include transitions(.4s);
+			}
+
+			&:hover{
+				color: #0073f9;
+				
+				&:after{
+					@include translate(5px, 0);
+				}
 			}
 		}
 	}
 }
+
+// Responsiveness
+	// Tablet (min-width: 768px) and (max-width: 1024px)
+	@media screen and (min-width: 768px) {
+		.nav-header{
+			.logo-wrapper{
+				margin-left: 50px;
+			}
+
+			.visit-site{
+				font-size: 12px;
+				right: 50px;
+
+				a:after{
+					top: 0;
+				}
+			}
+		}
+	}
+
+	// Desktop
+	@media screen and (min-width: 1400px){
+		.nav-header{
+			height: 100px;
+
+			.logo-wrapper{
+				width: 213px;
+				height: 40px;
+				margin-top: 50px;
+				margin-left: 80px;
+			}
+
+			.visit-site{
+				top: 64px;
+				right: 80px;
+			}
+		}
+	}

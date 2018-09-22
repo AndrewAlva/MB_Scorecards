@@ -66,3 +66,49 @@
 	background: linear-gradient(to right, #f5f7fc 0%,#ffffff 100%);
 	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f5f7fc', endColorstr='#ffffff',GradientType=1 );
 }
+
+
+// Responsiveness
+	// Tablet (min-width: 768px) and (max-width: 1024px)
+	@media screen and (min-width: 768px) {
+		.landing-wrapper{
+			padding-left: 50px;
+			padding-right: 50px;
+		}
+
+		.cta-container{
+			.copy{
+				width: initial;
+				font-size: 26px;
+			}
+
+			.logo-wrapper{
+				width: 240px;
+				height: 99px;
+			}
+		}
+	}
+
+	// Small desktop screens and laptops (min-width: 1025px) and (max-width: 1399.8px)
+	@media screen and (min-width: 1025px) {
+		.bg-bar{
+			height: 51%;
+		}
+	}
+
+	// Desktop
+	@media screen and (min-width: 1400px){
+		.landing-wrapper{
+			padding-top: 115px;
+		}
+
+		.cta-container{
+			margin-bottom: 55px;
+
+			.copy{
+				font-size: 40px;
+				margin-bottom: 36px;
+			}
+		}
+	}
+
