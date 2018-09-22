@@ -17,41 +17,45 @@ block content
 				include includes/tgp_logo.jade
 
 
-		form#contact-form.simple-form.fade-out(name="main-contact-form" action="mail.php" method="POST" enctype="multipart/form-data")
-			h2.copy.fade-out
-				| Fill out this form and get the full report of 
-				| <a href="https://thegentsplace.com/" target="_blank"> ©The Gents Place</a>
-				| as a Franchise Opportunity.
+		#content-wrapper
+			form#contact-form.simple-form.fade-out(name="main-contact-form" action="mail.php" method="POST" enctype="multipart/form-data")
+				h2.copy.fade-out
+					| Fill out this form and get the full report of 
+					| <a href="https://thegentsplace.com/" target="_blank"> ©The Gents Place</a>
+					| as a Franchise Opportunity.
 
-			.inputs-wrapper
-				.input-row
-					.single-input.fade-out
-						label.required(for="contact-name") First Name
-						input#contact-name(name="name" type="text" placeholder="Your Name" required)
-						figure.triangle-container.fade-out
-							include includes/triangle-dropshadow.jade
+				.inputs-wrapper
+					.input-row
+						.single-input.fade-out
+							label.required(for="contact-name") First Name
+							input#contact-name(name="name" type="text" placeholder="Your Name" required)
+							figure.triangle-container.fade-out
+								include includes/triangle-dropshadow.jade
 
-					.single-input.fade-out
-						label.required(for="contact-lastname") Last Name
-						input#contact-lastname(name="lastname" type="text" placeholder="Your Last Name" required)
-				
-				.input-row
-					.single-input.fade-out
-						label.required(for="contact-cellphone") Cell Phone
-						input#contact-cellphone(name="cellphone" type="text" placeholder="Your Cell Phone" required)
+						.single-input.fade-out
+							label.required(for="contact-lastname") Last Name
+							input#contact-lastname(name="lastname" type="text" placeholder="Your Last Name" required)
+					
+					.input-row
+						.single-input.fade-out
+							label.required(for="contact-cellphone") Cell Phone
+							input#contact-cellphone(name="cellphone" type="text" placeholder="Your Cell Phone" required)
 
-					.single-input.fade-out
-						label.required(for="contact-email") Email
-						input#contact-email(name="email" type="email" placeholder="Your Email" required)
+						.single-input.fade-out
+							label.required(for="contact-email") Email
+							input#contact-email(name="email" type="email" placeholder="Your Email" required)
 
-				.input-row.fade-out
-					label(for="contact-feedback") Feedback
-					textarea#contact-feedback(name="message" type="text" placeholder="Your Feedback" required)
+					.input-row.fade-out
+						label(for="contact-feedback") Feedback
+						textarea#contact-feedback(name="message" type="text" placeholder="Your Feedback" required)
 
-			button#submit-contact-data.brand-btn.md-btn.dark-blue.fade-out(type="submit") Request
+				.confidential.fade-out
+					p All the information provided will be kept strictly confidential.
+
+				button#submit-contact-data.brand-btn.md-btn.dark-blue.fade-out(type="submit") Request
 
 
-		footer.footer-links
+		footer.footer-links.fade-out
 			ul.media-list
 				li.channels-list
 					a.link-hover-shift(href="https://itunes.apple.com/us/podcast/modern-business/id1323641416?mt=2" target="_blank")
