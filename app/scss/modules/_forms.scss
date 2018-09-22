@@ -12,7 +12,7 @@
 		text-align: right;
 		background-color: #fff;
 		@include drawShadow(5px, 2px, 50px, 5px, rgba(0,44,109,.24));
-		// @include drawShadow(8px, 8px, 16px, 0, rgba(0,44,109,.24));
+		@include transitions(1s);
 
 		&:before, &:after{
 			content: '';
@@ -48,8 +48,11 @@
 			margin-bottom: 32px;
 			font-size: 12px;
 			line-height: 1.2em;
-			color: #0073f9;
+			font-weight: lighter;
+			@include smoothFont;
 			text-align: left;
+			color: #0073f9;
+			@include transitions(1s);
 
 			a{
 				color: #00145a;
@@ -62,6 +65,12 @@
 			text-align: left;
 
 			.input-row{
+				@include transitions(1s);
+
+				.single-input{
+					@include transitions(1s);
+				}
+
 				label{
 					display: block;
 					margin-bottom: 8px;
@@ -86,10 +95,32 @@
 					color: #0073f9;
 					@include boxSizeFit;
 					@include input-placeholder-color(#a4b2d5);
+
+					&:focus{
+						outline: 0;
+						border: 1px solid rgba(0, 85, 255, 0.5);
+						box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 4px 10px 0 rgba(0, 0, 0, 0.04);
+					}
 				}
 
 				textarea{
+					max-width: 100%;
+					min-width: 100%;
 					height: 120px;
+				}
+
+				.triangle-container{
+					display: none;
+					position: absolute;
+					width: 150px;
+					height: 215px;
+					top: -44px;
+					left: -151px;
+					@include transitions(1s);
+
+					svg{
+						width: 100%;
+					}
 				}
 			}
 		}
@@ -156,31 +187,6 @@
 	}
 
 
-// "InView" animation style
-// .contact-section{
-// 	.contact-triangles-bg .inview-children-peek{
-// 		opacity: 0;
-// 		@include translate(-120px, 0);
-
-// 		&.active{
-// 			opacity: .4;
-// 			@include translate(0, 0);
-// 		}
-// 	}
-
-// 	.intro-title.inview-children, .intro-description.inview-children, .form-division.inview-children, .narrated-form .inview-children-peek{
-// 		opacity: 0;
-// 		@include translate(0, 20px);
-
-// 		&.active{
-// 			@include translate(0,0);
-// 			opacity: 1;
-// 		}
-// 	}
-	
-// }
-
-
 // Responsiveness
 	// Tablet (min-width: 768px) and (max-width: 1024px)
 	@media screen and (min-width: 768px) {
@@ -240,6 +246,19 @@
 
 			#submit-contact-data{
 				margin-top: 10px;
+			}
+		}
+	}
+
+	// Fix for form triangle pointing input
+	@media screen and (min-width: 1100px){
+		.simple-form{
+			.inputs-wrapper{
+				.input-row{
+					.triangle-container{
+						display: block;
+					}
+				}
 			}
 		}
 	}

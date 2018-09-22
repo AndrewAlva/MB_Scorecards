@@ -39,6 +39,7 @@
 		text-align: center;
 		color: $main-titles-color;
 		@include smoothFont;
+		@include transitions(.6s);
 	}
 
 	.logo-wrapper{
@@ -46,6 +47,7 @@
 		width: 190px;
 		height: 78px;
 		margin: 0 auto;
+		@include transitions(.6s);
 
 		svg{
 			width: 100%;
@@ -65,6 +67,7 @@
 	background: -webkit-linear-gradient(left, #f5f7fc 0%,#ffffff 100%);
 	background: linear-gradient(to right, #f5f7fc 0%,#ffffff 100%);
 	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f5f7fc', endColorstr='#ffffff',GradientType=1 );
+	@include transitions(1s);
 }
 
 

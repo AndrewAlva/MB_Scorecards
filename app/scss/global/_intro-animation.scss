@@ -1,0 +1,4 @@
+.fade-out{
+	@include translate(0, -10px);
+	opacity: 0;
+}

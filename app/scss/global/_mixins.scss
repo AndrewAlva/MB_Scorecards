@@ -107,11 +107,11 @@
 }
 
 @mixin transitions($timing){
-	-webkit-transition: all $timing cubic-bezier(.57,0,0.2,1);
-	   -moz-transition: all $timing cubic-bezier(.57,0,0.2,1);
-	    -ms-transition: all $timing cubic-bezier(.57,0,0.2,1);
-	     -o-transition: all $timing cubic-bezier(.57,0,0.2,1);
-	        transition: all $timing cubic-bezier(.57,0,0.2,1);
+	-webkit-transition: all $timing cubic-bezier(.3,0,.2,1);
+	   -moz-transition: all $timing cubic-bezier(.3,0,.2,1);
+	    -ms-transition: all $timing cubic-bezier(.3,0,.2,1);
+	     -o-transition: all $timing cubic-bezier(.3,0,.2,1);
+	        transition: all $timing cubic-bezier(.3,0,.2,1);
 }
 
 @mixin transitionsDelayed($timing, $delay){

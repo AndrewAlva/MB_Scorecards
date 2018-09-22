@@ -13,6 +13,7 @@
 		height: 30px;
 		margin-top: 22px;
 		margin-left: 20px;
+		@include transitions(.6s);
 
 		svg{
 			width: 100%;
@@ -27,11 +28,12 @@
 		text-transform: uppercase;
 		font-size: 11px;
 		font-family: 'Apercu', sans-serif;
+		@include transitions(.6s);
 
 		a{
 			text-decoration: none;
 			color: #00145a;
-			@include transitions(.4s);
+			@include transitions(.6s);
 		
 			&:after{
 				content: '';
@@ -44,7 +46,7 @@
 				border-left: 6px solid #2f70f4;
 				border-top: 5px solid transparent;
 				border-bottom: 5px solid transparent;
-				@include transitions(.4s);
+				@include transitions(.6s);
 			}
 
 			&:hover{
