@@ -1,0 +1,46 @@
+// Roulette effect hover
+	.link-hover-shift{
+		@include transitions(0.4s);
+
+		.hover-mask{
+			position: relative;
+			display: block;
+			overflow: hidden;
+		}
+
+		.hover-container{
+			position: relative;
+			display: inline-block;
+			@include transitionTransform(.2s);
+
+			&:before{
+				content: attr(fx-text);
+				position: absolute;
+				top: 120%;
+				color: $main-blue;
+				@include smoothFont;
+			}
+		}
+
+		&:hover{
+			.hover-container{
+				@include translate(0, -120%);
+			}
+		}
+	}
+
+	#fb-li{
+		.link-hover-shift .hover-container:before{
+			font-size: 0.85em;
+		}
+	}
+	#ig-li{
+		.link-hover-shift .hover-container:before{
+			font-size: 1em;
+		}
+	}
+	#in-li{
+		.link-hover-shift .hover-container:before{
+			@include translate(0,-2px);
+		}
+	}

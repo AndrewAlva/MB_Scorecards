@@ -159,3 +159,29 @@
 	background: linear-gradient(to right, rgb(245,247,252) 0%,rgb(255,255,255) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
 	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f5f7fc', endColorstr='#ffffff',GradientType=1 ); /* IE6-9 */
 }
+
+@mixin input-placeholder-color($color){
+	&:-ms-input-placeholder { /* Internet Explorer 10-11 */
+	    color: $color;
+	}
+
+	&::-ms-input-placeholder { /* Microsoft Edge */
+	    color: $color;
+	}
+
+	&:-moz-placeholder { /* Firefox 18- */
+		color: $color;
+	}
+	&::-moz-placeholder { /* Firefox 19+ */
+		color: $color;
+	}
+
+	&::-webkit-input-placeholder { /* Chrome/Opera/Safari */
+		color: $color;
+	}
+
+	&::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
+	    color: $color;
+	    opacity: 1; /* Firefox */
+	}
+}

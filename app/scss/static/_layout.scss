@@ -12,46 +12,57 @@
 .landing-wrapper{
 	position: relative;
 	width: 100%;
-	height: 100%;
-	padding-top: 55px;
-	padding-bottom: 60px;
-	color: $body-color;
-	background-color: $main-blue;
+	// height: 100%;
+	padding: 60px 20px 0;
+	background-color: #fff;
 	@include boxSizeFit;
+	// overflow-x: hidden;
+}
 
-	.logos-header{
-		position: absolute;
-		top: 0;
-		left: 0;
-		width: 100%;
-		height: 60px;
-		background-color: rgba(255,255,255,0.1);
+.cta-container{
+	z-index: 2;
+	position: relative;
+	width: 100%;
+	margin-top: 35px;
+	margin-bottom: 45px;
+	text-align: center;
 
-		.logo-wrapper{
-			position: relative;
-			width: 152px;
-			height: 30px;
-			margin-top: 25px;
-			margin-left: 20px;
-			background-color: gray;
-		}
+	.copy{
+		position: relative;
+		width: 260px;
+		margin: 0 auto;
+		margin-bottom: 26px;
+		font-size: 22px;
+		letter-spacing: -0.04em;
+		line-height: 1.2em;
+		font-weight: 400;
+		text-align: center;
+		color: $main-titles-color;
+		@include smoothFont;
+	}
 
-		.visit-site{
-			position: absolute;
-			display: block;
-			top: 30px;
-			right: 20px;
+	.logo-wrapper{
+		position: relative;
+		width: 190px;
+		height: 78px;
+		margin: 0 auto;
+
+		svg{
+			width: 100%;
 		}
 	}
 }
 
-.intro-title{
-	color: $main-titles-color;
-	width: 200px;
-}
-
-.intro-description{
-	color: #fff;
-	width: 280px;
-	margin-bottom: 24px;
+.bg-bar{
+	z-index: 1;
+	position: absolute;
+	width: 100%;
+	height: 68%;
+	left: 0;
+	bottom: 0;
+	background: #f5f7fc;
+	background: -moz-linear-gradient(left, #f5f7fc 0%, #ffffff 100%);
+	background: -webkit-linear-gradient(left, #f5f7fc 0%,#ffffff 100%);
+	background: linear-gradient(to right, #f5f7fc 0%,#ffffff 100%);
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f5f7fc', endColorstr='#ffffff',GradientType=1 );
 }

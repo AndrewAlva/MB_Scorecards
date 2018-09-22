@@ -1,0 +1,18 @@
+# humanstxt.org/
+# The humans responsible & technology colophon
+
+# TEAM
+
+    Andrew Alvarado -- Front End Developer -- @andrew__alva
+    Zero Morales -- Web Designer -- @zero_alex
+
+
+# THANKS
+
+    Ryan Hicks, Host & Executive producer of Modrn Businss
+
+
+# TECHNOLOGY COLOPHON
+
+    CSS3, HTML5
+    npm, Brunch, jQuery, Waypoints

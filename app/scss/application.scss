@@ -2,10 +2,16 @@
 @import url("https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.0/normalize.min.css");
 
 // Import your files
+@import '_vendor/fontawesome.min.scss';
+
+@import 'global/_fonts.scss';
 @import 'global/_vars.scss';
 @import 'global/_mixins.scss';
 @import 'global/_default.scss';
+@import 'global/_buttons.scss';
 
 @import 'static/_layout.scss';
 
+@import 'modules/_header-nav.scss';
 @import 'modules/_forms.scss';
+@import 'modules/_footer.scss';

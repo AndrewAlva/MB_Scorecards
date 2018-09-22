@@ -4,38 +4,110 @@ block content
 	section.landing-wrapper
 		header.nav-header.listen-inview
 			.logo-wrapper.inview-children
-				//- img(src="", alt="Modrn Businss Opportunites", title="Modrn Businss Opportunites")
+				include includes/mb_opportunities_logo.jade
 
 			.visit-site.inview-children
-				a(href="#") Go to the site
+				a(href="https://modrnbusiness.com/" target="_blank") Go to the site
 
 
-		.listen-inview
-			h3.intro-title.h2.inview-children For more information on The Gents Place Franchise Opportunity:
+		.cta-container.listen-inview
+			h1.copy.inview-children For more information on Franchise Opportunity of:
 
 			figure.logo-wrapper.inview-children
-				//- img(src="", alt="The Gents Place", title="The Gents Place")
+				include includes/tgp_logo.jade
 
-		form#contact-form.narrated-form.listen-inview(name="main-contact-form" action="mail.php" method="POST" enctype="multipart/form-data")
-			.narrated-line.inview-children-peek
-				label.h3.regular-text(for="contact-name") Hi, my name is
-				input#contact-name.narrated-input(name="name" type="text" placeholder="Your Name" required)
-				span.h3.regular-text ,
 
-			.narrated-line.inview-children-peek
-				label.h3.regular-text(for="contact-cellphone") my phone number is
-				input#contact-cellphone.narrated-input(name="cellphone" type="text" placeholder="Your Cellphone" required)
-				span.h3.regular-text ,
+		form#contact-form.simple-form.listen-inview(name="main-contact-form" action="mail.php" method="POST" enctype="multipart/form-data")
+			h2.copy.inview-children
+				| Fill out the contact form to request the complete report about 
+				| <a href="https://thegentsplace.com/" target="_blank"> ©The Gents Place</a>
+				| as a Franchise Opportunity.
 
-			.narrated-line.inview-children-peek
-				label.h3.regular-text(for="contact-email") please send the scorecard to
-				input#contact-email.narrated-input(name="email" type="email" placeholder="this Email" required)
-				span.h3.regular-text .
+			.inputs-wrapper.inview-children
+				.input-row.inview-children
+					.single-input
+						label.required(for="contact-name") First Name
+						input#contact-name(name="name" type="text" placeholder="Your Name" required)
 
-			.narrated-line.inview-children-peek
-				label.h3.regular-text(for="contact-message") I have a message for you,
+					.single-input
+						label.required(for="contact-lastname") Last Name
+						input#contact-lastname(name="lastname" type="text" placeholder="Your Last Name" required)
+				
+				.input-row.inview-children
+					.single-input
+						label.required(for="contact-cellphone") Cell Phone
+						input#contact-cellphone(name="cellphone" type="text" placeholder="Your Cell Phone" required)
 
-			.narrated-line.inview-children-peek
-				textarea#contact-message.narrated-input(name="message" type="text" placeholder="Your Message" cols="30" rows="1" required)
+					.single-input
+						label.required(for="contact-email") Email
+						input#contact-email(name="email" type="email" placeholder="Your Email" required)
+
+				.input-row.inview-children
+					.single-input
+						label(for="contact-feedback") Feedback
+						textarea#contact-feedback(name="message" type="text" placeholder="Your Feedback" required)
 
 			button#submit-contact-data.brand-btn.md-btn.dark-blue.inview-children-peek(type="submit") Request
+
+
+		footer.footer-links
+			ul.media-list
+				li.channels-list
+					a.link-hover-shift(href="https://itunes.apple.com/us/podcast/modern-business/id1323641416?mt=2" target="_blank")
+						span.hover-mask
+							span.hover-container(fx-text="iTunes") iTunes
+
+				li.channels-list
+					a.link-hover-shift(href="https://soundcloud.com/modernbusiness/" target="_blank")
+						span.hover-mask
+							span.hover-container(fx-text="Soundcloud") Soundcloud
+
+				li.channels-list
+					a.link-hover-shift(href="https://www.stitcher.com/podcast/ryan-hicks/modern-business" target="_blank")
+						span.hover-mask
+							span.hover-container(fx-text="Stitcher") Stitcher
+
+				li.channels-list
+					a.link-hover-shift(href="https://overcast.fm/itunes1323641416/modern-business" target="_blank")
+						span.hover-mask
+							span.hover-container(fx-text="Overcast") Overcast
+
+				li.channels-list.no-link Spotify
+				li.channels-list.no-link 
+					a.link-hover-shift(href="https://medium.com/@ryanthomashicks" target="_blank")
+						span.hover-mask
+							span.hover-container(fx-text="Medium") Medium
+
+				li.channels-list.no-link Apple Tv
+				li.channels-list.no-link Amazon Prime
+				li.channels-list.no-link Youtube
+
+
+			ul.rrss-list
+				li#fb-li.icon-listed
+					a.link-hover-shift(href="https://www.facebook.com/ModernBusinessPodcast/" target="_blank")
+						span.hover-mask
+							span.hover-container(fx-text="")
+								i#fb-icon.fab.fa-facebook-f
+
+				li#ig-li.icon-listed
+					a.link-hover-shift(href="https://www.instagram.com/ryanthomashicks/" target="_blank")
+						span.hover-mask
+							span.hover-container(fx-text="")
+								i#ig-icon.fab.fa-instagram
+
+				li#in-li.icon-listed
+					a.link-hover-shift(href="https://www.linkedin.com/in/ryanthomashicks/" target="_blank")
+						span.hover-mask
+							span.hover-container(fx-text="")
+								i#in-icon.fab.fa-linkedin-in
+
+			figure.legals-division
+
+			.legals-footer
+				p.legal-text.brand-copyright ©2018 ModrnBusinss Inc.  All Right Reserved
+				p.legal-text.studio-copyright 
+					a(href="http://mandelbrot.mx/" target="_blank") Designed & Developed by ®Mandelbrot Studio
+
+		
+		figure.bg-bar

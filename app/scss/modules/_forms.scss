@@ -8,73 +8,160 @@
 		background-color: #fff;
 	}
 
-	.narrated-form{
+	.simple-form{
+		z-index: 2;
 		position: relative;
-		width: 90%;
+		width: 100%;
 		margin: 0 auto;
+		margin-bottom: 20px;
+		padding: 20px 28px 8px;
 		padding-bottom: 8px;
-		text-align: center;
-		color: #fff;
+		@include boxSizeFit;
+		font-family: 'Apercu', sans-serif;
+		text-align: right;
+		background-color: #fff;
+		@include drawShadow(5px, 2px, 50px, 5px, rgba(0,44,109,.24));
+		// @include drawShadow(8px, 8px, 16px, 0, rgba(0,44,109,.24));
 
-		.narrated-line{
-			margin-bottom: 12px;
+		&:before, &:after{
+			content: '';
+			position: absolute;
+			display: block;
+			left: 0;
+			right: 0;
+		}
+		&:before{
+			top: -18px;
+			border-right-color: transparent;
+			border-right-style: solid;
+			border-right-width: 16px;
 
-			.regular-text{
-				font-family: $brand-font-regular;
+			border-bottom-color: #fff;
+			border-bottom-style: solid;
+			border-bottom-width: 18px;
+		}
+		&:after{
+			bottom: -18px;
+			border-left-color: transparent;
+			border-left-style: solid;
+			border-left-width: 16px;
+
+			border-top-color: #fff;
+			border-top-style: solid;
+			border-top-width: 18px;
+		}
+
+		.copy{
+			position: relative;
+			width: 100%;
+			margin-bottom: 32px;
+			font-size: 12px;
+			line-height: 1.2em;
+			color: #0073f9;
+			text-align: left;
+
+			a{
+				color: #00145a;
+				text-decoration: none;
 			}
+		}
 
-			.narrated-input{
-				max-width: 170px;
-				font-family: $brand-font-regular;
-				font-weight: lighter;
-				@include smoothFont();
-				font-size: 1.85em;
-				line-height: 1em;
-				letter-spacing: -0.02em;
-				color: $light-blue-brand;
-				background-color: transparent;
-				border: none;
-				border-bottom: 1px solid $light-blue-brand;
-				text-align: center;
+		.inputs-wrapper{
+			position: relative;
+			text-align: left;
 
-				&:-ms-input-placeholder { /* Internet Explorer 10-11 */
-				    color: $light-blue-brand;
+			.input-row{
+				.single-input{
+					label{
+						display: block;
+						margin-bottom: 8px;
+						font-size: 9px;
+						color: #7d8eaa;
+
+						&.required:after{
+							content: '*';
+							position: relative;
+							display: inline-block;
+							color: #f00;
+						}
+					}
+
+					input, textarea{
+						display: block;
+						width: 100%;
+						padding: 12px 18px;
+						margin-bottom: 18px;
+						border: 1px solid rgba(164,178,213,.5);
+						font-size: 12px;
+						color: #0073f9;
+						@include boxSizeFit;
+						@include input-placeholder-color(#a4b2d5);
+					}
+
+					textarea{
+						height: 120px;
+					}
 				}
-
-				&::-ms-input-placeholder { /* Microsoft Edge */
-				    color: $light-blue-brand;
-				}
-
-				&:-moz-placeholder { /* Firefox 18- */
-					color: $light-blue-brand;
-				}
-				&::-moz-placeholder { /* Firefox 19+ */
-					color: $light-blue-brand;
-				}
-
-				&::-webkit-input-placeholder { /* Chrome/Opera/Safari */
-					color: $light-blue-brand;
-				}
-
-				&::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
-				    color: $light-blue-brand;
-				    opacity: 1; /* Firefox */
-				}
-			}
-
-			#contact-email{
-				max-width: 95%;
-				margin-top: 10px;
-			}
-
-			textarea.narrated-input{
-				max-width: 95%;
-				height: 25px;
 			}
 		}
 
 		#submit-contact-data{
-			margin-top: 35px;
+			position: relative;
+			padding: 2px 22px;
+			margin-top: 20px;
+			margin-bottom: 12px;
+			outline: 0;
+			border: none;
+			@include boxSizeFit;
+			font-size: 14px;
+			text-align: center;
+			text-transform: uppercase;
+			color: #fff;
+			background-color: #0070f8;
+			cursor: pointer;
+			@include transitions(.4s);
+
+			&:before, &:after{
+				content: '';
+				position: absolute;
+				display: block;
+				left: 0;
+				right: 0;
+				@include transitions(.4s);
+			}
+			&:before{
+				top: -11px;
+				border-right-color: transparent;
+				border-right-style: solid;
+				border-right-width: 11px;
+
+				border-bottom-color: #0070f8;
+				border-bottom-style: solid;
+				border-bottom-width: 11px;
+			}
+			&:after{
+				bottom: -11px;
+				border-left-color: transparent;
+				border-left-style: solid;
+				border-left-width: 11px;
+
+				border-top-color: #0070f8;
+				border-top-style: solid;
+				border-top-width: 11px;
+			}
+
+			&:hover{
+				background-color: #3c7cff;
+
+				&:before{
+					border-bottom-color: #3c7cff;
+					border-right-width: 0;
+				}
+				&:after{
+					border-top-color: #3c7cff;
+					border-left-width: 0;
+				}
+			}
 		}
 	}
 
