@@ -8,11 +8,12 @@
 @import 'global/_vars.scss';
 @import 'global/_mixins.scss';
 @import 'global/_default.scss';
-@import 'global/_intro-animation.scss';
 @import 'global/_buttons.scss';
 
 @import 'static/_layout.scss';
 
 @import 'modules/_header-nav.scss';
 @import 'modules/_forms.scss';
-@import 'modules/footer.scss';
+@import 'modules/_footer.scss';
+
+@import 'global/_intro-animation.scss';

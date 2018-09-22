@@ -1,4 +1,11 @@
 .fade-out{
 	@include translate(0, -10px);
 	opacity: 0;
+	pointer-events: none;
+}
+
+.fade-in{
+	@include translate(0,0);
+	opacity: 1;
+	pointer-events: auto;
 }

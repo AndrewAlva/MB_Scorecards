@@ -17,8 +17,8 @@ block content
 				include includes/tgp_logo.jade
 
 
-		#content-wrapper
-			form#contact-form.simple-form.fade-out(name="main-contact-form" action="mail.php" method="POST" enctype="multipart/form-data")
+		form#contact-form.simple-form.fade-out(name="main-contact-form" action="mail.php" method="POST" enctype="multipart/form-data")
+			#request-wrapper
 				h2.copy.fade-out
 					| Fill out this form and get the full report of 
 					| <a href="https://thegentsplace.com/" target="_blank"> ©The Gents Place</a>
@@ -53,6 +53,13 @@ block content
 					p All the information provided will be kept strictly confidential.
 
 				button#submit-contact-data.brand-btn.md-btn.dark-blue.fade-out(type="submit") Request
+
+			.answer-wrapper
+				//- h2 Thanks for joining the community!
+				//- p 
+				//- 	| You will receive an email with the complete report of ©The Gents Place very soon, meanwhile you can visit
+				//- 	| <a href="https://modrnbusiness.com/"> Modrn Businss complete site</a>
+				//- 	| to know more about our purpose and get more content. 
 
 
 		footer.footer-links.fade-out
