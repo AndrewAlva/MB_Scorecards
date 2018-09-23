@@ -1,9 +1,7 @@
 .footer-links{
 	z-index: 2;
 	position: relative;
-	width: 100vw;
-	margin-left: -20px;
-	margin-right: -20px;
+	width: 100%;
 	color: $body-color;
 	display: -webkit-box;
     display: -moz-box;
@@ -157,8 +155,6 @@
 	@media screen and (min-width: 768px) {
 		.footer-links {
 			display: block;
-			margin-left: -50px;
-			margin-right: -50px;
 
 			.media-list, .rrss-list, .legals-footer{
 				padding-left: 50px;

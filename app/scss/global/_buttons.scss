@@ -1,3 +1,74 @@
+// Brand button
+	.mb-button{
+		position: relative;
+		padding: 0 22px;
+		margin-top: 11px;
+		margin-bottom: 11px;
+		outline: 0;
+		border: none;
+		@include boxSizeFit;
+		font-size: 14px;
+		text-align: center;
+		text-transform: uppercase;
+		text-decoration: none;
+		@include smoothFont;
+		color: #fff;
+		background-color: #0070f8;
+		cursor: pointer;
+		@include transitions(.4s);
+
+		&:before, &:after{
+			content: '';
+			position: absolute;
+			display: block;
+			left: 0;
+			right: 0;
+			@include transitions(.4s);
+		}
+		&:before{
+			top: -11px;
+			border-right-color: transparent;
+			border-right-style: solid;
+			border-right-width: 11px;
+
+			border-bottom-color: #0070f8;
+			border-bottom-style: solid;
+			border-bottom-width: 11px;
+		}
+		&:after{
+			bottom: -11px;
+			border-left-color: transparent;
+			border-left-style: solid;
+			border-left-width: 11px;
+
+			border-top-color: #0070f8;
+			border-top-style: solid;
+			border-top-width: 11px;
+		}
+
+		&:hover{
+			background-color: #3c7cff;
+
+			&:before{
+				border-bottom-color: #3c7cff;
+				border-right-width: 0;
+			}
+			&:after{
+				border-top-color: #3c7cff;
+				border-left-width: 0;
+			}
+		}
+
+		// Desktop
+		@media screen and (min-width: 1400px){
+			font-size: 16px;
+			padding-left: 24px;
+			padding-right: 24px;
+		}
+	}
+
+
+
 // Roulette effect hover
 	.link-hover-shift{
 		@include transitions(0.4s);

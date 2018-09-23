@@ -21,7 +21,7 @@
 			.done(function(e) {
 				console.log("e",e);
 				$('#request-wrapper').addClass('fade-out');
-				$('.answer-wrapper').html('<h2>Thanks for joining the community!</h2><p> You will receive an email with the complete report of ©The Gents Place very soon, meanwhile you can visit <a href="https://modrnbusiness.com/"> Modrn Businss complete site</a> to know more about our purpose and get more content. </p>');
+				$('.answer-wrapper').html('<h2>Thanks for joining the community!</h2><p>You will receive an email with the complete report of ©The Gents Place very soon, meanwhile you can visit Modrn Businss complete site to know more about our purpose and get more content.</p><a href="https://modrnbusiness.com/" class="mb-button">Visit Full Site</a>');
 				$('.answer-wrapper').addClass('fade-in');
 				// TweenMax.to($('.subscribe-section'), 0.6, {autoAlpha: 0, display: 'none', onComplete:function(){
 				// 	$('.subscribe-section').html('<h3 class="intro-title h2"> Thanks for subscribing! </h3> <p class="intro-description h4"> Wait news from us soon. </p>').fadeIn();

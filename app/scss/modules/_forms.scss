@@ -138,72 +138,19 @@
 			}
 		}
 
-		#submit-contact-data{
-			position: relative;
-			padding: 0 22px;
-			margin-top: 11px;
-			margin-bottom: 11px;
-			outline: 0;
-			border: none;
-			@include boxSizeFit;
-			font-size: 14px;
-			text-align: center;
-			text-transform: uppercase;
-			@include smoothFont;
-			color: #fff;
-			background-color: #0070f8;
-			cursor: pointer;
-			@include transitions(.4s);
-
-			&:before, &:after{
-				content: '';
-				position: absolute;
-				display: block;
-				left: 0;
-				right: 0;
-				@include transitions(.4s);
-			}
-			&:before{
-				top: -11px;
-				border-right-color: transparent;
-				border-right-style: solid;
-				border-right-width: 11px;
-
-				border-bottom-color: #0070f8;
-				border-bottom-style: solid;
-				border-bottom-width: 11px;
-			}
-			&:after{
-				bottom: -11px;
-				border-left-color: transparent;
-				border-left-style: solid;
-				border-left-width: 11px;
-
-				border-top-color: #0070f8;
-				border-top-style: solid;
-				border-top-width: 11px;
-			}
-
-			&:hover{
-				background-color: #3c7cff;
-
-				&:before{
-					border-bottom-color: #3c7cff;
-					border-right-width: 0;
-				}
-				&:after{
-					border-top-color: #3c7cff;
-					border-left-width: 0;
-				}
-			}
-		}
+		
 	}
+
+	// #request-wrapper{
+	// 	opacity: 0;
+	// }
 
 	.answer-wrapper{
 		z-index: 2;
 		position: absolute;
 		width: 100%;
-		height: 150px;
+		max-width: 360px;
+		height: 220px;
 		padding: 20px 28px 15px;
 		margin: auto;
 		top: 0; bottom: 0;
@@ -220,6 +167,7 @@
 
 		h2{
 			margin-bottom: 16px;
+			font-family: 'Moderat-Regular', sans-serif;
 			font-size: 20px;
 			letter-spacing: -0.04em;
 			line-height: 1.2em;
@@ -230,6 +178,7 @@
 		}
 
 		p{
+			margin-bottom: 36px;
 			font-size: 12px;
 			line-height: 1.2em;
 			font-weight: lighter;
@@ -247,6 +196,18 @@
 			padding-right: 40px;
 			margin-bottom: 85px;
 			text-align: left;
+			@include drawShadow(5px, 12px, 100px, 10px, rgba(0,44,109,.24));
+
+			&:before{
+				top: -38px;
+				border-right-width: 36px;
+				border-bottom-width: 38px;
+			}
+			&:after{
+				bottom: -38px;
+				border-left-width: 36px;
+				border-top-width: 38px;
+			}
 
 			.copy{
 				font-size: 14px;
@@ -293,6 +254,18 @@
 			#submit-contact-data{
 				float: right;
 			}
+
+			.answer-wrapper{
+				max-width: 420px;
+
+				h2{
+					font-size: 24px;
+				}
+
+				p{
+					font-size: 14px;
+				}
+			}
 		}
 	}
 
@@ -301,6 +274,7 @@
 		.simple-form{
 			max-width: 946px;
 			padding: 40px 80px;
+			margin-bottom: 100px;
 
 			.inputs-wrapper {
 				.input-row {
@@ -328,8 +302,6 @@
 	// Desktop
 	@media screen and (min-width: 1400px){
 		.simple-form{
-			margin-bottom: 75px;
-
 			.copy{
 				font-size: 20px;
 				margin-bottom: 47px;
@@ -347,10 +319,19 @@
 				}
 			}
 
-			#submit-contact-data{
-				font-size: 16px;
-				padding-left: 24px;
-				padding-right: 24px;
+			.answer-wrapper{
+				max-width: 720px;
+				height: 270px;
+				
+				h2{
+					font-size: 36px;
+					margin-bottom: 26px;
+				}
+
+				p{
+					font-size: 20px;
+					margin-bottom: 56px;
+				}
 			}
 		}
 	}

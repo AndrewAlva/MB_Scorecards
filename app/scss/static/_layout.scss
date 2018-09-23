@@ -6,7 +6,7 @@
 	top: 0;
 	left: 0;
 	width: 100%;
-	height: 100%;
+	min-height: 100%;
 }
 
 .landing-wrapper{
@@ -59,7 +59,7 @@
 	z-index: 1;
 	position: absolute;
 	width: 100%;
-	height: 68%;
+	height: 67%;
 	left: 0;
 	bottom: 0;
 	background: #f5f7fc;
@@ -80,6 +80,8 @@
 		}
 
 		.cta-container{
+			margin-bottom: 65px;
+
 			.copy{
 				width: initial;
 				font-size: 26px;
@@ -90,12 +92,24 @@
 				height: 99px;
 			}
 		}
+
+		.bg-bar{
+			height: 48%;
+		}
 	}
 
 	// Small desktop screens and laptops (min-width: 1025px) and (max-width: 1399.8px)
 	@media screen and (min-width: 1025px) {
+		.landing-wrapper{
+			padding: 60px 0 0;
+		}
+
+		.cta-container{
+			margin-bottom: 75px;
+		}
+
 		.bg-bar{
-			height: 51%;
+			height: 50%;
 		}
 	}
 
@@ -106,12 +120,14 @@
 		}
 
 		.cta-container{
-			margin-bottom: 55px;
-
 			.copy{
 				font-size: 40px;
 				margin-bottom: 36px;
 			}
+		}
+
+		.bg-bar{
+			height: 46%;
 		}
 	}
 

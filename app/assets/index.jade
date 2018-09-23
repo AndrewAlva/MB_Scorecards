@@ -1,15 +1,14 @@
 extends views/layout.jade
 
 block content
+	header.nav-header
+		.logo-wrapper.fade-out
+			include includes/mb_opportunities_logo.jade
+
+		.visit-site.fade-out
+			a(href="https://modrnbusiness.com/" target="_blank") Go to the site
+
 	section.landing-wrapper
-		header.nav-header
-			.logo-wrapper.fade-out
-				include includes/mb_opportunities_logo.jade
-
-			.visit-site.fade-out
-				a(href="https://modrnbusiness.com/" target="_blank") Go to the site
-
-
 		.cta-container
 			h1.copy.fade-out For more information on Franchise Opportunity of:
 
@@ -52,74 +51,72 @@ block content
 				.confidential.fade-out
 					p All the information provided will be kept strictly confidential.
 
-				button#submit-contact-data.brand-btn.md-btn.dark-blue.fade-out(type="submit") Request
+				button#submit-contact-data.mb-button.fade-out(type="submit") Request
 
 			.answer-wrapper
 				//- h2 Thanks for joining the community!
-				//- p 
-				//- 	| You will receive an email with the complete report of ©The Gents Place very soon, meanwhile you can visit
-				//- 	| <a href="https://modrnbusiness.com/"> Modrn Businss complete site</a>
-				//- 	| to know more about our purpose and get more content. 
+				//- p You will receive an email with the complete report of ©The Gents Place very soon, meanwhile you can visit Modrn Businss complete site to know more about our purpose and get more content.
+				//- a.mb-button(href="https://modrnbusiness.com/") Visit Full Site
 
 
-		footer.footer-links.fade-out
-			ul.media-list
-				li.channels-list
-					a.link-hover-shift(href="https://itunes.apple.com/us/podcast/modern-business/id1323641416?mt=2" target="_blank")
-						span.hover-mask
-							span.hover-container(fx-text="iTunes") iTunes
+	footer.footer-links.fade-out
+		ul.media-list
+			li.channels-list
+				a.link-hover-shift(href="https://itunes.apple.com/us/podcast/modern-business/id1323641416?mt=2" target="_blank")
+					span.hover-mask
+						span.hover-container(fx-text="iTunes") iTunes
 
-				li.channels-list
-					a.link-hover-shift(href="https://soundcloud.com/modernbusiness/" target="_blank")
-						span.hover-mask
-							span.hover-container(fx-text="Soundcloud") Soundcloud
+			li.channels-list
+				a.link-hover-shift(href="https://soundcloud.com/modernbusiness/" target="_blank")
+					span.hover-mask
+						span.hover-container(fx-text="Soundcloud") Soundcloud
 
-				li.channels-list
-					a.link-hover-shift(href="https://www.stitcher.com/podcast/ryan-hicks/modern-business" target="_blank")
-						span.hover-mask
-							span.hover-container(fx-text="Stitcher") Stitcher
+			li.channels-list
+				a.link-hover-shift(href="https://www.stitcher.com/podcast/ryan-hicks/modern-business" target="_blank")
+					span.hover-mask
+						span.hover-container(fx-text="Stitcher") Stitcher
 
-				li.channels-list
-					a.link-hover-shift(href="https://overcast.fm/itunes1323641416/modern-business" target="_blank")
-						span.hover-mask
-							span.hover-container(fx-text="Overcast") Overcast
+			li.channels-list
+				a.link-hover-shift(href="https://overcast.fm/itunes1323641416/modern-business" target="_blank")
+					span.hover-mask
+						span.hover-container(fx-text="Overcast") Overcast
 
-				li.channels-list.no-link Spotify
-				li.channels-list.no-link 
-					a.link-hover-shift(href="https://medium.com/@ryanthomashicks" target="_blank")
-						span.hover-mask
-							span.hover-container(fx-text="Medium") Medium
+			li.channels-list.no-link Spotify
+			li.channels-list.no-link 
+				a.link-hover-shift(href="https://medium.com/@ryanthomashicks" target="_blank")
+					span.hover-mask
+						span.hover-container(fx-text="Medium") Medium
 
-				li.channels-list.no-link Apple Tv
-				li.channels-list.no-link Amazon Prime
-				li.channels-list.no-link Youtube
+			li.channels-list.no-link Apple Tv
+			li.channels-list.no-link Amazon Prime
+			li.channels-list.no-link Youtube
 
 
-			ul.rrss-list
-				li#fb-li.icon-listed
-					a.link-hover-shift(href="https://www.facebook.com/ModernBusinessPodcast/" target="_blank")
-						span.hover-mask
-							span.hover-container(fx-text="")
-								i#fb-icon.fab.fa-facebook-f
+		ul.rrss-list
+			li#fb-li.icon-listed
+				a.link-hover-shift(href="https://www.facebook.com/ModernBusinessPodcast/" target="_blank")
+					span.hover-mask
+						span.hover-container(fx-text="")
+							i#fb-icon.fab.fa-facebook-f
 
-				li#ig-li.icon-listed
-					a.link-hover-shift(href="https://www.instagram.com/ryanthomashicks/" target="_blank")
-						span.hover-mask
-							span.hover-container(fx-text="")
-								i#ig-icon.fab.fa-instagram
+			li#ig-li.icon-listed
+				a.link-hover-shift(href="https://www.instagram.com/ryanthomashicks/" target="_blank")
+					span.hover-mask
+						span.hover-container(fx-text="")
+							i#ig-icon.fab.fa-instagram
 
-				li#in-li.icon-listed
-					a.link-hover-shift(href="https://www.linkedin.com/in/ryanthomashicks/" target="_blank")
-						span.hover-mask
-							span.hover-container(fx-text="")
-								i#in-icon.fab.fa-linkedin-in
+			li#in-li.icon-listed
+				a.link-hover-shift(href="https://www.linkedin.com/in/ryanthomashicks/" target="_blank")
+					span.hover-mask
+						span.hover-container(fx-text="")
+							i#in-icon.fab.fa-linkedin-in
 
-			figure.legals-division
+		figure.legals-division
 
-			.legals-footer
-				p.legal-text.brand-copyright ©2018 ModrnBusinss Inc.  All Right Reserved
-				p.legal-text.studio-copyright 
-					a(href="https://mandelbrot.mx/" target="_blank") Designed & Developed by ®Mandelbrot Studio
+		.legals-footer
+			p.legal-text.brand-copyright ©2018 ModrnBusinss Inc.  All Right Reserved
+			p.legal-text.studio-copyright 
+				a(href="https://mandelbrot.mx/" target="_blank") Designed & Developed by ®Mandelbrot Studio
 
-		
-		figure.bg-bar.fade-out
+	
+	figure.bg-bar.fade-out
