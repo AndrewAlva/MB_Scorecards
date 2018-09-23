@@ -10,7 +10,7 @@ document.addEventListener('DOMContentLoaded', function() {
 // Trigger functions after page is completely loaded
 window.onload = function() {
     // Do something, remove preloader perhaps
-    // require('./humans.js');
+    require('./humans.js');
     
   	require('./main.js');
 }
