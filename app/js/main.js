@@ -14,7 +14,7 @@
 			alert("You must fill all the fields marked with a red asterisk to complete the request!");
 		} else {
 			$.ajax({
-				url: "/send_data.php",
+				url: "send_data.php",
 				type: "POST",
 				data: { name: $('#contact-name').val(), lastname: $('#contact-lastname').val(), tel: $("#contact-cellphone").val(), email: $('#contact-email').val(), feedback: $('#contact-feedback').val() }
 			})
