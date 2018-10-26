@@ -21,7 +21,7 @@
 			.done(function(e) {
 				// console.log("e",e);
 				$('#request-wrapper').addClass('fade-out');
-				$('.answer-wrapper').html('<h2>Thanks for joining the community!</h2><p>You will receive an email with the complete report of ©The Gents Place very soon, meanwhile you can visit Modrn Businss full site to know more about our purpose and get more content.</p><a href="https://modrnbusiness.com/" class="mb-button">Visit Full Site</a>');
+				$('.answer-wrapper').html('<h2>Here’s to you!</h2><p>Many thanks for your interest. We will get back with you soon to define expectations and next steps. Cheers</p><a href="https://modrnbusiness.com/" class="mb-button">Visit Full Site</a>');
 				$('.answer-wrapper').addClass('fade-in');
 			});
 		}

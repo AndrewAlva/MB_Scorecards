@@ -8,7 +8,7 @@
 	$email = $_POST['email'];
 	$feedback = $_POST['feedback'];
 
-	$formcontent="Hey Ryan, this is a new email written by a user from modrnbusiness.com/TGP; this is what they say:\n\nHi, my name is $name $lastname, my email address is: $email and my cellphone number is: $tel.\nI have feedback for you:\n $feedback";
+	$formcontent="Hey Ryan, this is a new email written by a user from modrnbusiness.com/TGP; this is what they say:\n\nHi, my name is $name $lastname,\nmy email address is: $email \nand my cellphone number is: $tel.\n\nI need to tell you something:\n$feedback";
 	$mailheader = "From: $email \r\n";
 
 	// Write in the .txt file
