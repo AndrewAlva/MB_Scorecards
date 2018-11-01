@@ -1,5 +1,5 @@
 <?php
-	$recipient = "rhicks009@gmail.com, andrew@mandelbrot.mx";
+	$recipient = "Ryan@modrnbusiness.com, andrew@mandelbrot.mx";
 	$subject = "Request of TGP Franchise Opportunity";
 
 	$name = $_POST['name'];
