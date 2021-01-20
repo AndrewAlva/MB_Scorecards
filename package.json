@@ -15,7 +15,7 @@
     "brunch": "^2",
     "brunch-static": "^1.2.1",
     "clean-css-brunch": "^2",
-    "gsap": "^2.0.1",
+    "gsap": "^3.6.0",
     "html-brunch-static": "^1.4.0",
     "jade-brunch": "^2.8.0",
     "pug-brunch-static": "^3.0.0",
